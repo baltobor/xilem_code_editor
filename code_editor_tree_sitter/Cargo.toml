@@ -1,0 +1,39 @@
+[package]
+name = "code_editor_tree_sitter"
+description = "tree-sitter syntax highlighting for code_editor_core, one cargo feature per language."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[features]
+default = []
+all-languages = ["lang-c", "lang-cpp", "lang-json", "lang-just", "lang-markdown", "lang-pem", "lang-proto", "lang-rust", "lang-toml", "lang-yaml", "lang-zig"]
+lang-c = ["dep:tree-sitter-c"]
+lang-cpp = ["dep:tree-sitter-cpp"]
+lang-json = ["dep:tree-sitter-json"]
+lang-just = ["dep:tree-sitter-just"]
+lang-markdown = ["dep:tree-sitter-md"]
+lang-pem = ["dep:regex"]
+lang-proto = ["dep:tree-sitter-proto"]
+lang-rust = ["dep:tree-sitter-rust"]
+lang-toml = ["dep:tree-sitter-toml-ng"]
+lang-yaml = ["dep:tree-sitter-yaml"]
+lang-zig = ["dep:tree-sitter-zig"]
+
+[dependencies]
+code_editor_core = { workspace = true }
+tree-sitter = { workspace = true }
+tree-sitter-highlight = { workspace = true }
+regex = { workspace = true, optional = true }
+tree-sitter-c = { version = "0.23", optional = true }
+tree-sitter-cpp = { version = "0.23", optional = true }
+tree-sitter-json = { version = "0.24", optional = true }
+tree-sitter-just = { version = "0.2", optional = true }
+tree-sitter-md = { version = "0.5", optional = true }
+tree-sitter-proto = { version = "0.4", optional = true }
+tree-sitter-rust = { version = "0.23", optional = true }
+tree-sitter-toml-ng = { version = "0.7", optional = true }
+tree-sitter-yaml = { version = "0.7", optional = true }
+tree-sitter-zig = { version = "1.1", optional = true }

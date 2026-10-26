@@ -1,0 +1,45 @@
+[workspace]
+# Layered like linebender/xilem itself:
+#   code_editor_core        ~ masonry_core / xilem_core  (no UI framework)
+#   code_editor_tree_sitter ~ a HighlightProvider implementation
+#   masonry_code_editor     ~ masonry                    (widget layer)
+#   xilem_code_editor       ~ xilem_masonry              (view layer)
+#   xilem_rich_text         styled, wrapping paragraphs (Markdown rendering)
+#   xilem_markdown_editing  Markdown formatting bar + view-mode toggles
+resolver = "3"
+members = [
+    "code_editor_core",
+    "code_editor_tree_sitter",
+    "masonry_code_editor",
+    "xilem_code_editor",
+    "xilem_rich_text",
+    "xilem_markdown_editing",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+license = "Apache-2.0"
+authors = ["Jacek Wisniowski <github@baltobor.com>"]
+repository = "https://github.com/baltobor/xilem_code_editor"
+
+[workspace.dependencies]
+code_editor_core        = { path = "code_editor_core" }
+code_editor_tree_sitter = { path = "code_editor_tree_sitter" }
+masonry_code_editor     = { path = "masonry_code_editor" }
+xilem_rich_text         = { path = "xilem_rich_text" }
+
+xilem   = { git = "https://github.com/linebender/xilem", branch = "main" }
+masonry = { git = "https://github.com/linebender/xilem", branch = "main" }
+masonry_testing = { git = "https://github.com/linebender/xilem", branch = "main" }
+
+ropey    = "1"
+smallvec = "1"
+regex    = "1"
+tracing  = "0.1"
+serde    = { version = "1", features = ["derive"] }
+lsp-types = "0.95"
+
+tree-sitter           = "0.25"
+tree-sitter-highlight = "0.25"

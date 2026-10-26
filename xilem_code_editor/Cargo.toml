@@ -1,0 +1,17 @@
+[package]
+name = "xilem_code_editor"
+description = "A code editor view for Xilem: from a plain Markdown editor to a full IDE editor."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+code_editor_core = { workspace = true }
+masonry_code_editor = { workspace = true }
+xilem = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+code_editor_tree_sitter = { workspace = true, features = ["all-languages"] }

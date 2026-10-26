@@ -1,0 +1,19 @@
+[package]
+name = "masonry_code_editor"
+description = "A code editor widget for masonry: layout, painting, gutter, popups and input."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+code_editor_core = { workspace = true }
+masonry = { workspace = true }
+ropey = { workspace = true }
+smallvec = { workspace = true }
+tracing = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]
+masonry_testing = { workspace = true }

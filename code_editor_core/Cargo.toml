@@ -1,0 +1,19 @@
+[package]
+name = "code_editor_core"
+description = "Framework-independent code editor model: documents, selections, cursors, snippets, popup timing and data-provider traits."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[features]
+lsp-types = ["dep:lsp-types"]
+serde = ["dep:serde"]
+
+[dependencies]
+ropey = { workspace = true }
+smallvec = { workspace = true }
+tracing = { workspace = true }
+lsp-types = { workspace = true, optional = true }
+serde = { workspace = true, optional = true }

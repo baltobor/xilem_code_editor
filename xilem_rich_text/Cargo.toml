@@ -1,0 +1,16 @@
+[package]
+name = "xilem_rich_text"
+description = "Rich text for Xilem: a wrapping paragraph with inline styles and clickable links."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+xilem = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+masonry = { workspace = true }
+masonry_testing = { workspace = true }

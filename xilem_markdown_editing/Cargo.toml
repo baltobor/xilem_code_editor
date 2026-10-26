@@ -1,0 +1,13 @@
+[package]
+name = "xilem_markdown_editing"
+description = "Markdown editing bar for Xilem apps: formatting buttons and Edit/Preview/Split toggles, on top of xilem_code_editor."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+xilem = { workspace = true }
+xilem_code_editor = { path = "../xilem_code_editor" }
+xilem_material_icons = { git = "https://github.com/baltobor/xilem_material_icons", branch = "main" }
